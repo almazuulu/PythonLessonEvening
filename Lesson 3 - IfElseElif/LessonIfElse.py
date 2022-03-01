@@ -117,3 +117,6 @@ print(resultText)
 
 numberOper = int(input('Введите для операции 1-Сложение 2-Вычитание'))
 
+
+
+
