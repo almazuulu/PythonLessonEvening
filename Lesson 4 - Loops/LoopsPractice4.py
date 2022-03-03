@@ -9,12 +9,12 @@ avgNumb = 0
 totalSum = 0
 distance = 0
 
-while start < finish:
-    totalSum = start + totalSum
-    start += 1
-
-
-    distance+=1
+# while start <= finish:
+#     totalSum = start + totalSum
+#     start += 1
+#
+#     while distance <= (finish-start):
+#         distance+=1
 
 print(distance)
 print(totalSum)
