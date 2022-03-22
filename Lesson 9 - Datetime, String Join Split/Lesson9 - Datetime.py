@@ -19,7 +19,6 @@ print(somedatetime)
 print(f'день: {somedatetime.day}\nмесяц: '
       f'{somedatetime.month}\nгод: {somedatetime.year}, час: {somedatetime.second}')
 
-
 todayDayTime = datetime.now()
 print(todayDayTime)
 
@@ -82,4 +81,6 @@ print(newDate2)
 userBDate = input('Put ur birthdate d m yy-h:m: ')
 birthDate = datetime.strptime(userBDate,'%d %m %y-%H:%M')
 print(birthDate.strftime('%d/%B/%Y-%H:%M'))
+
+
 
