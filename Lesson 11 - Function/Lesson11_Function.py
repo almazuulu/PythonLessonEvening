@@ -139,7 +139,6 @@ def checkAge(age):
     if age >=18:
         #resultText = 'You can vote'
         return 'You can vote'
-
     else:
         #resultText = 'You are too young!'
         return 'You are too young!'
