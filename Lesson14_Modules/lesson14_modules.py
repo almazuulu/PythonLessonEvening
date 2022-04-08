@@ -2,6 +2,7 @@
 #from random import random, randint
 from random import *
 from copy import deepcopy
+from decimal import Decimal
 #random
 num = random()  #0.1 - 1.0
 #num = random() * 100 #0 - 100
@@ -94,11 +95,45 @@ for i in range(10):
     myList.append(a)
 print(myList)
 
+numberDec1 = Decimal('25.23')
+numberDec2 = Decimal('45.56')
 
+result = (numberDec1 + numberDec2) * 2
 
+result2  = numberDec1 + Decimal('24.3445')
+print(result)
+print(result2)
 
+number2 = 45.232323432423423
+numberRandom = random() * 100
+print(number2)
+print(numberRandom)
 
+#1 - format
+print('Number2 is {0:.2f}'.format(number2))
+print('Random number is {0:.2f}'.format(numberRandom))
 
+#2 - f строкой
+print(f'Number2 is {number2:.2f}')
+print(f'Random number is {numberRandom:.3f}')
+
+# - %
+"""
+s - string 
+d - int
+f - float
+e - expon
+"""
+
+name = 'Brad Pitt'
+age = 56
+salary = 20.5452321323
+
+infoActor = 'Name of actor is %s and his age is %d' % (name, age)
+print(infoActor)
+
+print('Name of actor is %s and his age is %d and his salary '
+      'for "Inglorious Barstards" is %f' % (name, age, salary))
 
 
 

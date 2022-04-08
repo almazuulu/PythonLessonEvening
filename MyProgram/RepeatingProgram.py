@@ -114,6 +114,7 @@ def showWorkers():
 
 def addSalary():
     keyWorker = None
+
     try:
         nameWorker = input('Введите имя сотруд-ка, для повышение ЗП: ')
         salaryAdd_value = int(input('На сколько повысить ЗП? :'))
@@ -125,6 +126,7 @@ def addSalary():
         # myWorkerDict[keyWorker]["Заработная плата"] =  int(myWorkerDict[keyWorker]["Заработная плата"]) + salaryAdd_value
         myWorkerDict[keyWorker]["Заработная плата"] += salaryAdd_value
 
+        print(f'Новая ЗП сотрудника {myWorkerDict[keyWorker]["ФИО"]}: {myWorkerDict[keyWorker]["Заработная плата"]}')
 
     except ValueError:
         print('Введите число!')
@@ -144,8 +146,7 @@ def addSalary():
     except BaseException as be:
         print(f'Ошибка! Тип ошибки {be}')
 
-    finally:
-        print(f'Новая ЗП сотрудника {myWorkerDict[keyWorker]["ФИО"]}: {myWorkerDict[keyWorker]["Заработная плата"]}')
+
 
 def menu(textMenu):
 
