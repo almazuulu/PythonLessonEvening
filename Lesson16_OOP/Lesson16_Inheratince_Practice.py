@@ -15,7 +15,7 @@ class VipAccount(BankAccount):
         self.service = room
     def vipserving(self):
         print(f'You will be served the first and in the special room.')
-        print(f'You can choose rooms to be served: ')
+        print(f'You can choose rooms to be served:  ')
 
         for room in self.service:
             print(f'In room: {room}')
