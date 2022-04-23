@@ -25,10 +25,10 @@ class Person:
         self.agePerson =  agePerson
 
 
-class MathTeacher(Teacher, Person):
-    def __init__(self,name, quantStudent, subject, experience, n1,n2,n3, agePerson):
+class MathTeacher(Teacher):
+    def __init__(self,name, quantStudent, subject, experience, n1,n2,n3):
         super().__init__(name, quantStudent, subject, experience)
-        Person.__init__(self,agePerson)
+        #Person.__init__(self,agePerson)
         self.n1 = n1
         self.n2 = n2
         self.n3 = n3
@@ -64,23 +64,28 @@ class GeographyTeacher(Teacher):
         super().display()
         print(f'Capital of {self.nameOfCountry} is {self.findCityOfCountry()}')
 
-class MathAndGeoTeahcher(MathTeacher, GeographyTeacher):
-    def __init__(self,name, quantStudent, subject, experience, n1,n2,n3, nameOfCountry):
+class MathAndGeoTeahcher(MathTeacher):
+    def __init__(self,name, quantStudent, subject, experience, n1,n2,n3, nameCountry):
         MathTeacher.__init__(self,name, quantStudent, subject, experience, n1,n2,n3)
-        GeographyTeacher.__init__(self,name, quantStudent, subject, experience,nameOfCountry)
+        #GeographyTeacher.__init__(self,name, quantStudent, subject, experience,nameCountry)
+        #self.nameCountry = nameCountry
+
+        self.gTeacher = GeographyTeacher(name, quantStudent, subject, experience,nameCountry)
 
     def display(self):
         MathTeacher.display(self)
-        GeographyTeacher.display(self)
+        self.gTeacher.display()
+
 
     def greeting(self):
         print(f'I am Math and Geo teacher!')
 
 def main():
-    teacher1 = MathTeacher('Valentin Sergeev',45,'Algebra',12, 45, 56, 45,65)
+    teacher1 = MathTeacher('Valentin Sergeev',45,'Algebra',12, 45, 56, 45)
     teacher2 = GeographyTeacher('Oleg Valerievich', 51, 'Geography', 7, 'Germany')
-    # teacher3  = MathAndGeoTeahcher('Talant Kadyrbekov',32,'Geometry and Geography',
-    #                                15, 23, 45, 67,'Turkey')
+
+    #name, quantStudent, subject, experience, n1,n2,n3, agePerson, nameOfCountry
+    teacher3  = MathAndGeoTeahcher(nameCountry='Turkey',name='Talant Kadyrbekov',quantStudent=32,subject='Geometry and Geography', experience=30, n1=23, n2=45, n3=67)
 
     teacher1.display()
     print('*'* 10)
@@ -91,7 +96,7 @@ def main():
     print(f'Capital is: {teacher2.findCityOfCountry()}')
 
     print(MathTeacher.mro())
-    # teacher3.display()
+    teacher3.display()
 
 if __name__ == '__main__':
     main()

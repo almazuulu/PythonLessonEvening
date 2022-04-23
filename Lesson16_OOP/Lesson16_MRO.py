@@ -24,9 +24,6 @@ class D(A,B):
         self.somed = somed
 
     def display3(self):
-        # super().display()
-        # super().display2()
-        # super().countSmth()
         super().display()
         super().countSmth()
         A.display(self)
@@ -41,7 +38,6 @@ def main():
     d.display3()
 
     print(D.mro())
-
 
 if __name__ == '__main__':
     main()
