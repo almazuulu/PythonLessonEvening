@@ -111,7 +111,7 @@ def main():
 
     print(car1 <= car2)
 
-    print(car1==car2)
+    print(car1 == car2)
 
     print(len(car1))
 
