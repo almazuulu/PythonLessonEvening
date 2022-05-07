@@ -31,7 +31,7 @@ class Car:
         print('*' * 10)
 
         for indexnum, name in enumerate(self.ownerList):
-            print(f'{indexnum + 1}.{name}', end="\n")
+            print(f'{indexnum+1}.{name}', end="\n")
 
         print('*' * 10)
 
@@ -42,13 +42,10 @@ class Car:
         for indexnum, name in enumerate(self.ownerList):
             self.ownerList[indexnum] = f'{indexnum + 1} ый владелец {name}'
 
-
 def main():
     car1 = Car('Audi 100', 15, 2010, ['Adilet Toktosunov', 'Sergei Dovlatov', 'Aisuulu Buranova',
                                     'Arstan Bolotov', 'Tamara Sergeeva'])
-
     car1.display()
-
     name = 'Adilet'
 
     for indexNum, letter in enumerate(name):

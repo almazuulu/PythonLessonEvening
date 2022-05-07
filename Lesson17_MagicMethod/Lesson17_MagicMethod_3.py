@@ -43,7 +43,6 @@ class Car:
 
         return False
 
-
 def main():
     car1 = Car('Audi 100', 15, 2010, ['Adilet Toktosunov', 'Sergei Dovlatov', 'Aisuulu Buranova',
                                     'Arstan Bolotov', 'Tamara Sergeeva'])
